@@ -7,6 +7,10 @@
     --bg-color: #f5f4fa;
     --portfolio-box-gap: 30px;
 }
+
+html {
+    box-sizing: border-box;
+}
   
 .body {
     background-color: var(--primery-bg-color);
@@ -19,9 +23,16 @@
     margin: auto;
 }
 
+.section {
+    padding-bottom: 94px;
+}
+
+.container-feature {
+    margin-top: 94px;
+}
+
 .header {
     border-bottom: 1px solid #ececec;
-  
 }
 .header .container {
     display: flex;
@@ -29,7 +40,7 @@
     align-items: center;
 }
   
-.header .navigation {
+.navigation {
     display: flex;
     align-items: center;
 }
@@ -55,31 +66,36 @@ ul {
     list-style: none;
     padding: 0
 }
+
+img {
+    display: block;
+    max-width: 100%;
+}
   
 a {
     text-decoration: none;
 }
-  
+
+.site-nav {
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
 .site-nav .link {
     color: var(--primery-text-color);
     letter-spacing: 0.02em;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
-    display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    display: flex;
 }
   
 .site-nav .link:hover,
 .site-nav .link:focus {
     color: var(--accept-color);
 }
-.site-nav {
-    display: flex;
-    align-items: center;
-    margin: 0px;
-}
+
 .site-nav .link-is-curret {
     color: var(--accept-color);
     font-weight: 500;
@@ -87,8 +103,7 @@ a {
     line-height: 1.14;
     letter-spacing: 0.02em;
 }
-  
-.site-nav .item:not(:last-child) {
+.item:not(:last-child) {
     margin-right: 50px;
 }
   
@@ -99,16 +114,14 @@ a {
     line-height: 1.14;
     letter-spacing: 0.02em;
 }
+
+
 .contact-nav .link {
     color: var(--title-text-color);
     letter-spacing: 0.03em;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-left: auto;
-    padding-left: 50px;
 }
   
 .contact-nav .link:hover,
@@ -120,6 +133,7 @@ a {
     margin: 0px;
     display: flex;
     align-items: center;
+
 }
     
 .hero {
@@ -130,6 +144,10 @@ a {
     text-align: center;
     padding-top: 200px;
     padding-bottom: 200px;
+}
+.content-box {
+    width: 696px;
+    margin: auto;
 }
   
 .hero-title {
@@ -163,7 +181,29 @@ a {
     margin-bottom: 10px;
     margin-top: 0px;
 }
-  
+
+.feature-list .text {
+    color: var(--title-text-color);
+    letter-spacing: 0.03em;
+    font-size: 14px;
+    line-height: 1.71;
+    margin: 0px;
+    display: flex;
+}
+
+.feature-list {
+    display: flex;
+    margin: 0px;
+}
+
+.featute-item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.featute-item {
+    width: 270px;
+}
+
 .button {
     color: #ffffff;
     background-color: var(--accept-color);
@@ -188,26 +228,6 @@ a {
     margin-top: 0px;
     color: var(--primery-text-color);
 }
-  
-.text {
-    color: var(--title-text-color);
-    letter-spacing: 0.03em;
-    font-size: 14px;
-    line-height: 1.71;
-    margin: 0px;
-    width: 270px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.feature-list {
-    display: flex;
-    margin: 0px;
-}
-
-.featute-item:not(:last-child) {
-    margin-right: 30px;
-}
     
 .images {
     display: flex;
@@ -220,7 +240,7 @@ a {
 }
 
 .section-staff {
-    background-color: #f5f4fa;
+    background-color: var(--bg-color);
 }
 
 .card-staff {
@@ -228,22 +248,35 @@ a {
     margin: 0px;
 }
 
-.card-man {
+.card-item {
+    width: 270px;
     background-color: var(--primery-bg-color);
     text-align: center;
+}
+
+.card-text {
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .card-item:not(:last-child) {
     margin-right: 30px;
 }
-  
+
+.card-content {
+    padding: 20px 24px;
+    border-left: var(--border-card-content);
+    border-right: var(--border-card-content);
+    border-bottom: var(--border-card-content);
+}
+
 .staff-title {
     font-weight: 500;
     color: var(--primery-text-color);
     font-size: 16px;
     line-height: 1.18;
     letter-spacing: 0.03em;
-    margin-top: 30px;
+    margin-top: 0px;
     margin-bottom: 10px;
 }
   
@@ -254,10 +287,6 @@ a {
     letter-spacing: 0.03em;
     padding-bottom: 30px;
     margin-top: 0px;
-}
-
-.card-content {
-    padding: 20px 24px;
 }
 
 .portfolio-nav .button {
@@ -277,7 +306,7 @@ a {
 }
 
 .portfolio-nav {
-    margin-top: 94px;
+    margin-top: 0px;
     margin-bottom: 50px;
     display: flex;
     justify-content: center;
@@ -292,8 +321,6 @@ a {
 }
 
 .portfolio {
-    margin-top: 0px;
-    margin-bottom: 94px;
     display: flex;
     flex-wrap: wrap;
     margin-top: calc(-1 * var(--portfolio-box-gap));
@@ -302,12 +329,9 @@ a {
 
 .portfolio-box {
     background: var(--primery-bg-color);
-    border: 1px solid #eeeeee;
     box-sizing: border-box;
     width: 370px;
-    height: 404px;
     padding: 0;
-    flex-basis: calc(100% / 3)- var(--portfolio-box-gap);
     margin-left: var(--portfolio-box-gap);
     margin-top: var(--portfolio-box-gap);
 }
@@ -327,12 +351,21 @@ a {
     letter-spacing: 0.03em;
     color: var(--title-text-color);
     margin-top: 4px;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
     
 .footer {
     background-color: var(--accept-bg-color);
     padding-bottom: 60px;
+    padding-top: 60px;
+}
+
+.logo-text-footer {
+    font-family: Raleway, sans-serif;
+    letter-spacing: 0.03em;
+    font-size: 26px;
+    line-height: 1.19;
+    margin-bottom: 20px;
 }
   
 .logo-footer {
@@ -341,37 +374,19 @@ a {
     font-size: 26px;
     line-height: 1.19;
     margin-bottom: 20px;
-    padding-top: 60px;
 }
   
 .address {
     color: var(--primery-bg-color);
-    font-style: 400;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     font-style: normal;
-}
-
-.logo-footer {
-    color: var(--primery-bg-color);
-    letter-spacing: 0.03em;
-    font-size: 26px;
-    line-height: 1.19;
-}
-  
-.address {
-    color: var(--primery-bg-color);
-    font-style: normal;
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-    margin-top: 0px;
-    margin-bottom: 9px;
+    margin-top: 20px;
 }
 
 .contact-list {
-    margin-top: 0px;
+    margin-top: 9px;
     margin-bottom: 0px;
     padding-left: 0px;
 }
@@ -382,6 +397,9 @@ a {
     letter-spacing: 0.03em;
     text-decoration: none;
     color: rgba(255, 255, 255, 0.6);
-    padding-top: 9px;
     display: inline-block;
+}
+
+.contact-item:last-child {
+    margin-top: 9px;
 }
