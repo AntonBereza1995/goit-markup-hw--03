@@ -27,8 +27,13 @@ html {
     padding-bottom: 94px;
 }
 
-.container-feature {
+.container-feature,
+.container-portfolio-button {
     margin-top: 94px;
+}
+
+.container-portfolio-cards {
+    margin-bottom: 94px;
 }
 
 .header {
