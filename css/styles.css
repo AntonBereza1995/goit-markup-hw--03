@@ -36,6 +36,10 @@ html {
     margin-bottom: 94px;
 }
 
+.container-team-images {
+padding-top: 94px;
+}
+
 .header {
     border-bottom: 1px solid #ececec;
 }
