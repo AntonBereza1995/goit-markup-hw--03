@@ -25,19 +25,12 @@ html {
 
 .section {
     padding-bottom: 94px;
+    padding-top: 94px;
 }
 
-.container-feature,
-.container-portfolio-button {
-    margin-top: 94px;
-}
-
-.container-portfolio-cards {
-    margin-bottom: 94px;
-}
-
-.container-team-images {
-padding-top: 94px;
+.section-images-work{
+    padding-top: 0px;
+    padding-bottom: 94px;
 }
 
 .header {
@@ -85,10 +78,19 @@ a {
     text-decoration: none;
 }
 
+h1 {
+    max-width: 696px;
+    margin: auto;
+}
+
+p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
 .site-nav {
     display: flex;
     align-items: center;
-    margin: auto;
 }
 
 .site-nav .link {
@@ -124,6 +126,11 @@ a {
     letter-spacing: 0.02em;
 }
 
+.link-is-curret,
+.link {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
 
 .contact-nav .link {
     color: var(--title-text-color);
@@ -154,10 +161,6 @@ a {
     padding-top: 200px;
     padding-bottom: 200px;
 }
-.content-box {
-    width: 696px;
-    margin: auto;
-}
   
 .hero-title {
     color: var(--primery-bg-color);
@@ -178,6 +181,8 @@ a {
     font-size: 36px;
     line-height: 1.16;
     text-align: center;
+    margin-bottom: 50px;
+    margin-top: 0px;
 }
     
 .feature-list .title {
@@ -226,6 +231,10 @@ a {
     padding: 6px 22px;
     border: 0px;
 }
+
+.button-portfolio {
+    margin-left: 8px;
+}
   
 .title {
     letter-spacing: 0.03em;
@@ -266,6 +275,8 @@ a {
 .card-text {
     padding-top: 30px;
     padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .card-item:not(:last-child) {
@@ -296,6 +307,7 @@ a {
     letter-spacing: 0.03em;
     padding-bottom: 30px;
     margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .portfolio-nav .button {
@@ -394,8 +406,10 @@ a {
     margin-top: 20px;
 }
 
+.address-footer {
+    margin-bottom: 9px;
+}
 .contact-list {
-    margin-top: 9px;
     margin-bottom: 0px;
     padding-left: 0px;
 }
@@ -407,6 +421,7 @@ a {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.6);
     display: inline-block;
+    margin-bottom: 9px;
 }
 
 .contact-item:last-child {
