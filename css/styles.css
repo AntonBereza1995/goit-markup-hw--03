@@ -6,6 +6,8 @@
     --accept-bg-color: #2f303a;
     --bg-color: #f5f4fa;
     --portfolio-box-gap: 30px;
+    --border-card-content: 1px solid #EEEEEE;
+    --color-icon: #AFB1B8;
 }
 
 html {
@@ -36,6 +38,8 @@ html {
 .header {
     border-bottom: 1px solid #ececec;
     min-height: 80px;
+    align-items: center;
+    display: flex;
 }
 .header .container {
     display: flex;
@@ -422,6 +426,7 @@ p {
 .contact-list {
     margin-bottom: 0px;
     padding-left: 0px;
+    margin-top: 0;
 }
   
 .contact {
